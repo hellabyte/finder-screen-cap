@@ -1,0 +1,5 @@
+#!/usr/bin/env bash 
+dir="${1-$(pwd)}" 
+[[ -d "$dir" ]] && cd "$dir" || exit 1
+rec=$(date '+ScreenCap%Y%m%dT%H%M%S.png')
+screencapture -is ${rec}
